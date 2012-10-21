@@ -19,8 +19,12 @@
 #define _XOPEN_SOURCE 600
 #endif
 
-
+#ifndef _POSIX_C_SOURCE
 #define _POSIX_C_SOURCE 200112L
+#elif _POSIX_C_SOURCE < 200112L
+#undef _POSIX_C_SOURCE
+#define _POSIX_C_SOURCE 200112L
+#endif
 
 #include <ump/ump_osu.h>
 #include <ump/ump_debug.h>
