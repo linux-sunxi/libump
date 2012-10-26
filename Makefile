@@ -17,11 +17,10 @@
 UMP_DIR ?= .
 UMP_LIB ?= libUMP
 UDD_OS ?= linux
-CROSS_COMPILE ?= arm-none-linux-gnueabi-
 TARGET_CC ?= $(CROSS_COMPILE)gcc
 TARGET_AR ?= $(CROSS_COMPILE)ar
-CFLAGS += -I$(UMP_DIR)/include -I$(UMP_DIR)/include/ump -Wall -march=armv6 -mthumb-interwork -fno-strict-aliasing -Wno-strict-aliasing -Wno-long-long -O3
-
+CFLAGS += -I$(UMP_DIR)/include -I$(UMP_DIR)/include/ump -Wall -march=armv7-a -mthumb-interwork -fno-strict-aliasing -fPIC -Wno-strict-aliasing -Wno-long-long -O3
+LDFLAGS += -Wl,--no-as-needed -ldri2 -ldrm -lXfixes
 include ump.mak
 
 %.o: %.c
@@ -30,7 +29,7 @@ include ump.mak
 UMP_OBJS := $(UMP_SRCS:.c=.o)
 
 libUMP.so: $(UMP_OBJS)
-	$(TARGET_CC) -shared -o $@ $(UMP_OBJS) $(CFLAGS)
+	$(TARGET_CC) -shared -o $@ $(UMP_OBJS) $(CFLAGS) $(LDFLAGS)
 libUMP.a: $(UMP_OBJS)
 	$(TARGET_AR) rcs $@ $(UMP_OBJS)
 
