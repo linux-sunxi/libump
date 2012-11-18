@@ -19,6 +19,9 @@ UMP_LIB ?= libUMP
 UDD_OS ?= linux
 TARGET_CC ?= $(CROSS_COMPILE)gcc
 TARGET_AR ?= $(CROSS_COMPILE)ar
+INSTALL = install -m 644
+includedir ?= /usr/include
+libdir ?= /lib
 CFLAGS += -I$(UMP_DIR)/include -I$(UMP_DIR)/include/ump -Wall -march=armv7-a -mthumb-interwork -fno-strict-aliasing -fPIC -Wno-strict-aliasing -Wno-long-long -O3
 LDFLAGS += -Wl,--no-as-needed -ldri2 -ldrm -lXfixes
 include ump.mak
@@ -33,8 +36,19 @@ libUMP.so: $(UMP_OBJS)
 libUMP.a: $(UMP_OBJS)
 	$(TARGET_AR) rcs $@ $(UMP_OBJS)
 
+install: all
+	$(INSTALL) libUMP.so $(libdir)/libUMP.so
+	$(INSTALL) include/ump/ump.h $(includedir)/ump/ump.h
+	$(INSTALL) include/ump/ump_platform.h  $(includedir)/ump/ump_platform.h	
+	$(INSTALL) include/ump/ump_debug.h  $(includedir)/ump/ump_debug.h
+	$(INSTALL) include/ump/ump_osu.h  $(includedir)/ump/ump_osu.h
+	$(INSTALL) include/ump/ump_ref_drv.h  $(includedir)/ump/ump_ref_drv.h
+	$(INSTALL) include/ump/ump_uk_types.h  $(includedir)/ump/ump_uk_types.h
+
 .DEFAULT_GOAL = all
 all: libUMP.so libUMP.a
 
 clean:
 	-rm -f $(UMP_OBJS) libUMP.so libUMP.a
+
+.PHONY: all clean install
