@@ -21,7 +21,7 @@ TARGET_CC ?= $(CROSS_COMPILE)gcc
 TARGET_AR ?= $(CROSS_COMPILE)ar
 INSTALL = install -m 644
 includedir ?= /usr/include
-libdir ?= /lib
+libdir ?= /usr/lib
 CFLAGS += -I$(UMP_DIR)/include -I$(UMP_DIR)/include/ump -Wall -march=armv7-a -mthumb-interwork -fno-strict-aliasing -fPIC -Wno-strict-aliasing -Wno-long-long -O3
 LDFLAGS += -Wl,--no-as-needed -ldri2 -ldrm -lXfixes
 include ump.mak
@@ -38,6 +38,7 @@ libUMP.a: $(UMP_OBJS)
 
 install: all
 	$(INSTALL) libUMP.so $(libdir)/libUMP.so
+	mkdir $(includedir)/ump
 	$(INSTALL) include/ump/ump.h $(includedir)/ump/ump.h
 	$(INSTALL) include/ump/ump_platform.h  $(includedir)/ump/ump_platform.h	
 	$(INSTALL) include/ump/ump_debug.h  $(includedir)/ump/ump_debug.h
