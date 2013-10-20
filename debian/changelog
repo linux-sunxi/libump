@@ -1,0 +1,5 @@
+libump (3.0-0sunxi) unstable; urgency=low
+
+  * package up libump.
+
+ -- Luc Verhaegen <libv@skynet.be>  Sun, 20 Oct 2013 16:34:34 +0200
