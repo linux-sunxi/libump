@@ -20,12 +20,12 @@
  * Implementation of the user space API extensions provided by the reference implementation.
  */
 
-#include <ump/ump_ref_drv.h>
-#include <ump/ump.h>
+#include "ump_ref_drv.h"
+#include "ump.h"
 #include "ump_internal.h"
 #include "ump_arch.h"
-#include <ump/ump_debug.h>
-#include <ump/ump_osu.h>
+#include "ump_debug.h"
+#include "ump_osu.h"
 
 /* Allocate a buffer which can be used directly by hardware, 4kb aligned */
 static ump_handle ump_ref_drv_allocate_internal(unsigned long size, ump_alloc_constraints constraints, ump_cache_enabled cache);

@@ -21,11 +21,11 @@
  * It relies heavily on a arch backend to do the communication with the UMP device driver.
  */
 
-#include <ump/ump.h>
+#include "ump.h"
 #include "ump_internal.h"
 #include "ump_arch.h"
-#include <ump/ump_debug.h>
-#include <ump/ump_osu.h>
+#include "ump_debug.h"
+#include "ump_osu.h"
 
 UMP_API_EXPORT ump_result ump_open(void)
 {

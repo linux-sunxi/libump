@@ -22,8 +22,8 @@
 
 #define _POSIX_C_SOURCE 200112L
 
-#include <ump/ump_osu.h>
-#include <ump/ump_debug.h>
+#include "ump_osu.h"
+#include "ump_debug.h"
 
 #include <pthread.h>
 #include <time.h>

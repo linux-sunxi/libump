@@ -22,9 +22,9 @@
 #ifndef __UMP_UKU_H__
 #define __UMP_UKU_H__
 
-#include <ump/ump_osu.h>
-#include <ump/ump_debug.h>
-#include <ump/ump_uk_types.h>
+#include "ump_osu.h"
+#include "ump_debug.h"
+#include "ump_uk_types.h"
 
 #ifdef __cplusplus
 extern "C"

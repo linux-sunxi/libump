@@ -20,11 +20,11 @@
  * UMP arch layer for UMP-UDD
  */
 
-#include <ump/ump.h>
+#include "ump.h"
 #include "ump_arch.h"
-#include <ump/ump_debug.h>
+#include "ump_debug.h"
 
-#include <ump/ump_uk_types.h>
+#include "ump_uk_types.h"
 #include "ump_uku.h"
 
 /** Pointer to an OS-Specific context that we should pass in _uku_ calls */

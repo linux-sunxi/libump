@@ -23,8 +23,8 @@
 #ifndef _UNIFIED_MEMORY_PROVIDER_ARCH_H_
 #define _UNIFIED_MEMORY_PROVIDER_ARCH_H_
 
-#include <ump/ump.h>
-#include <ump/ump_ref_drv.h>
+#include "ump.h"
+#include "ump_ref_drv.h"
 #include "ump_internal.h"
 
 #ifdef __cplusplus

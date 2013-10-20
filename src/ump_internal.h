@@ -23,8 +23,8 @@
 #ifndef _UNIFIED_MEMORY_PROVIDER_INTERNAL_H_
 #define _UNIFIED_MEMORY_PROVIDER_INTERNAL_H_
 
-#include <ump/ump.h>
-#include <ump/ump_osu.h>
+#include "ump.h"
+#include "ump_osu.h"
 
 #ifdef __cplusplus
 extern "C" {

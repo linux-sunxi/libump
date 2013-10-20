@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <ump/ump_osu.h>
+#include "ump_osu.h"
 
 #include <stdlib.h>
 #include <string.h> /* memcmp, memchr, memset */
