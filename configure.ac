@@ -41,6 +41,7 @@ AC_CONFIG_FILES([
 	Makefile
 	src/Makefile
 	src/ump.h
+	libump.pc
 ])
 
 AC_OUTPUT
