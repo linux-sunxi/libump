@@ -23,6 +23,7 @@
 #ifndef _UNIFIED_MEMORY_PROVIDER_H_
 #define _UNIFIED_MEMORY_PROVIDER_H_
 
+#define UNIFIED_MEMORY_PROVIDER_VERSION @LIBUMP_VERSION_MAJOR@
 
 /** @defgroup ump_user_space_api UMP User Space API
  * @{ */

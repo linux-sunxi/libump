@@ -8,6 +8,9 @@ AM_MAINTAINER_MODE
 
 LT_INIT
 
+LIBUMP_VERSION_MAJOR=3
+AC_SUBST([LIBUMP_VERSION_MAJOR])
+
 # Support silent build rules, requires at least automake-1.11. Disable
 # by either passing --disable-silent-rules to configure or passing V=1
 # to make
@@ -37,6 +40,7 @@ AC_CHECK_LIB([pthread],[pthread_mutex_lock],[],[])
 AC_CONFIG_FILES([
 	Makefile
 	src/Makefile
+	src/ump.h
 ])
 
 AC_OUTPUT
