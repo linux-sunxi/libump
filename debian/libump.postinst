@@ -1,0 +1,1 @@
+udevadm trigger --verbose --action=add --sysname-match=ump
