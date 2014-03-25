@@ -1,10 +1,2 @@
-This repository is DEPRECATED and should not be used anymore.
-
-Please use the sunxi-mali repository instead. It is available at
-https://github.com/linux-sunxi/sunxi-mali
-
-You can clone it by running:
-
-> git clone https://github.com/linux-sunxi/sunxi-mali.git
-> git submodule init
-> git submodule update
+This repository contains the ARMs Universal Memory Provider userspace
+library. This library is a requirement for ARMs binary Mali driver.
